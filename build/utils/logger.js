@@ -1,8 +1,14 @@
 const chalk = require('chalk')
 const format = require('util').format
 
-const prefix = 'BEGIN-VUE'
+const prefix = `VUE 前端FE项目框架`
 const sep = chalk.gray('>')
+
+const banner = require('../../banner/index')
+
+exports.frameInfo= function () {
+  console.info(chalk.yellow(banner.logo()))
+}
 
 exports.info = function () {
   const msg = format.apply(format, arguments)

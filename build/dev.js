@@ -49,7 +49,7 @@ app.use(webpackHotMiddleware)
 if (config.server.https) {
   const options = {
     key: fs.readFileSync(resolveDir('ssl/key.pem')),
-    ca: fs.readFileSync(resolveDir('ssl/csr.pem')),
+    // ca: fs.readFileSync(resolveDir('ssl/csr.pem')),
     cert: fs.readFileSync(resolveDir('ssl/cert.pem'))
   }
   server = https.createServer(options, app)
@@ -58,8 +58,9 @@ if (config.server.https) {
 }
 
 async function start (wpkCfg) {
-  const devPort = await config.computed.getDevPort()
+  logger.frameInfo();
 
+  const devPort = await config.computed.getDevPort()
   server.listen(devPort, '0.0.0.0', () => {
     logger.info('Server start on: ')
     host.forEach(h => {
