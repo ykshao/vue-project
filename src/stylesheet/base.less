@@ -1,0 +1,124 @@
+html {
+    font-size: 62.5%;
+}
+
+@media only screen and (min-width: 481px) {
+    html {
+        font-size: 94%;
+    }
+}
+
+@media only screen and (min-width: 561px) {
+    html {
+        font-size: 109%;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    html {
+        font-size: 125%;
+    }
+}
+
+
+/*variable*/
+
+@imgPath: '../images/';
+@bgColor: #ecf0f1;
+@fontSize: 1.4rem;
+@borderColor: #ccc;
+@textColor: #666;
+@linkColor: #000;
+@hoverColor: #ff8200;
+@white: #fff;
+@fontFamily: "Microsoft YaHei";
+
+/*custom*/
+
+body {
+    font: @fontSize;
+    font-family: @fontFamily;
+    color: @textColor;
+    padding: 0px;
+    margin: 0px;
+    background: @bgColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt,
+figure {
+    font-family: @fontFamily;
+    outline: none;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul,
+li {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: @textColor;
+    text-decoration: none;
+}
+
+a:hover {
+    color: @hoverColor;
+}
+
+strong {
+    font-weight: bold;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+b {
+    font-weight: normal;
+}
+
+::selection {
+    background-color: @hoverColor;
+    color: white;
+    text-shadow: none;
+}
+
+strong {
+    font-weight: normal;
+}
+
+input {
+    background-color: transparent;
+}

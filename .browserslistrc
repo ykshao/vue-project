@@ -1,0 +1,6 @@
+[production]
+last 2 versions
+not ie <= 8
+
+[development]
+last 1 version

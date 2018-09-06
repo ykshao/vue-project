@@ -1,0 +1,73 @@
+## 项目信息
+project:
+  ## html: PC端
+  ## wap: 移动端
+  type: html
+  ## rem配置、仅wap有效
+  pxtorem:
+    ## 是否替换掉px
+    replace: true
+    ## html字体大小
+    rootValue: 75
+    ## 保留的精度
+    unitPrecision: 5
+    ## 要转换的CSS属性
+    propList: ['*']
+    ## 转换的黑名单
+    selectorBlackList: []
+    ## 媒体查询是否转换
+    mediaQuery: false
+    ## 可转换的最小精度值
+    minPixelValue: 0
+
+## 环境配置
+environment:
+  ## 开发环境
+  development:
+    ## 是否开启sourceMap
+    sourceMap: false
+
+  ## 生产环境
+  production:
+    ## 是否开启sourceMap
+    sourceMap: false
+
+## 开发服务器配置
+server:
+  ## 端口
+  port: ~
+  ## 是否启用https
+  https: false
+
+## 开发服务器功能开关配置
+onOff:
+  ## 静态资源开关
+  static: true
+  ## mock服务开关
+  mock: true
+  ## 代理开关，联调时可开启
+  proxy: false
+
+## 静态资源配置
+static:
+  ## 静态资源目录
+  dirname: static
+  ## 静态资源访问路径
+  virtualPath: /static
+
+## mock服务配置
+mock:
+  ## 拦截的请求前缀
+  context: /api
+  ## jsonp查询key
+  callback: callback
+
+## 代理配置
+proxy:
+  ## 拦截的请求前缀
+  context: /api
+  options:
+    ## API接口地址，IP或域名
+    target: http://127.0.0.1:3824
+    changeOrigin: true
+    secure: false

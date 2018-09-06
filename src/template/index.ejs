@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <% for (var cssFile in htmlWebpackPlugin.files.css) { %>
+  <link href="<%= htmlWebpackPlugin.files.css[cssFile] %>" rel="stylesheet">
+  <% } %>
+
+</head>
+<body>
+<div id="app">loading..</div>
+<% if(htmlWebpackPlugin.options.window) { %>
+<script>
+  var pageCfg = new Object();
+  <% for (var property in htmlWebpackPlugin.options.window) { %>
+  pageCfg['<%= property %>'] = JSON.parse('<%= JSON.stringify(htmlWebpackPlugin.options.window[property]) %>');
+  <% } %>
+</script>
+<% } %>
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+</body>
+</html>
