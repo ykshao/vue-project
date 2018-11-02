@@ -7,7 +7,7 @@ import Layout from '@/components/layout'
 import '@/stylesheet'
 
 if (__isWap) {  // eslint-disable-line no-undef
-  require('@/common/flexible')
+  // require('@/common/flexible')
 }
 
 Vue.use(http)

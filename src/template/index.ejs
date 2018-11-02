@@ -7,7 +7,23 @@
   <% for (var cssFile in htmlWebpackPlugin.files.css) { %>
   <link href="<%= htmlWebpackPlugin.files.css[cssFile] %>" rel="stylesheet">
   <% } %>
-
+  <script>
+    (function(doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          if (clientWidth > 750) {
+            clientWidth = 750;
+          }
+          docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+        };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
 </head>
 <body>
 <div id="app">loading..</div>

@@ -2,13 +2,13 @@
 project:
   ## html: PC端
   ## wap: 移动端
-  type: html
+  type: wap
   ## rem配置、仅wap有效
   pxtorem:
     ## 是否替换掉px
     replace: true
     ## html字体大小
-    rootValue: 75
+    rootValue: 100
     ## 保留的精度
     unitPrecision: 5
     ## 要转换的CSS属性
