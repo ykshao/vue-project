@@ -23,8 +23,8 @@ $ npm run build
 │   ├── ssl
 │   ├── utils
 │   └── webpack
-├── mock
-│   └── get
+├── global
+│   └── window
 ├── node_modules
 ├── src
 │   ├── common
@@ -43,7 +43,7 @@ $ npm run build
 ```
     - assets: 打包后此目录里的文件会和dist目录里的文件会合并
     - build: 运行环境支持
-    - mock: http数据和page数据
+    - global: page全局变量参数
     - node_modules: 项目依赖
     - src: 项目源文件
     - static: 临时的静态服务文件

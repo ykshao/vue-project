@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const empty = require('is-empty')
 const { nearRoot, nearSrc } = require('../utils/abs')
 const { env, project } = require('../config')
-const win = require(nearRoot('mock/window'))
+const win = require(nearRoot('global/window'))
 
 module.exports = [
   new HtmlWebpackPlugin({
